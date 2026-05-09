@@ -1,0 +1,306 @@
+{
+  "defaultRecipeId": "genericPage",
+  "recipes": [
+    {
+      "id": "genericPage",
+      "label": "Generic page",
+      "description": "Minimal starter with a hero and a body block. Good for simple informational pages.",
+      "sections": [
+        {
+          "type": "hero",
+          "props": {
+            "eyebrow": "Welcome",
+            "title": "Page title",
+            "subtitle": "Tell visitors what this page is about."
+          }
+        },
+        {
+          "type": "richText",
+          "props": {
+            "title": "About this page",
+            "description": "",
+            "bodyHtml": "<p>Share the full story here.</p>"
+          }
+        }
+      ]
+    },
+    {
+      "id": "projectShowcasePage",
+      "label": "Project showcase",
+      "description": "Case study layout: hero, background, highlights, gallery, and a contact CTA.",
+      "sections": [
+        {
+          "type": "hero",
+          "props": {
+            "eyebrow": "Case Study",
+            "title": "Project title",
+            "subtitle": "Short problem statement or one-liner."
+          }
+        },
+        {
+          "type": "richText",
+          "props": {
+            "title": "Background",
+            "description": "Why this project mattered, what the goal was, and who it helped.",
+            "bodyHtml": "<p>Describe the context, constraints, and what you set out to do.</p>"
+          }
+        },
+        {
+          "type": "cardGrid",
+          "props": {
+            "title": "Highlights",
+            "description": "Key results and outcomes.",
+            "items": [
+              { "title": "Result 1", "description": "Short metric or outcome." },
+              { "title": "Result 2", "description": "Short metric or outcome." },
+              { "title": "Result 3", "description": "Short metric or outcome." }
+            ]
+          }
+        },
+        {
+          "type": "gallery",
+          "props": {
+            "title": "Visuals",
+            "description": "Selected images from the project."
+          },
+          "bindings": { "sourceMode": "collection" }
+        },
+        {
+          "type": "contact",
+          "props": {
+            "title": "Start a project",
+            "description": "Reach out to discuss a similar engagement."
+          },
+          "bindings": { "sourceMode": "shared" }
+        }
+      ]
+    },
+    {
+      "id": "galleryStoryPage",
+      "label": "Gallery story",
+      "description": "Hero, a featured gallery, a written story, and follow-me social links.",
+      "sections": [
+        {
+          "type": "hero",
+          "props": {
+            "eyebrow": "Gallery",
+            "title": "Story title",
+            "subtitle": "Short caption under the image."
+          }
+        },
+        {
+          "type": "gallery",
+          "props": {
+            "title": "Featured work",
+            "description": ""
+          },
+          "bindings": { "sourceMode": "collection" }
+        },
+        {
+          "type": "richText",
+          "props": {
+            "title": "The story",
+            "description": "",
+            "bodyHtml": "<p>Tell the story behind the gallery.</p>"
+          }
+        },
+        {
+          "type": "socialLinks",
+          "props": {
+            "title": "Follow along",
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "leadCapturePage",
+      "label": "Lead capture",
+      "description": "Hero, three value props, short explainer, and an inline contact form.",
+      "sections": [
+        {
+          "type": "hero",
+          "props": {
+            "eyebrow": "Get in touch",
+            "title": "Ready to talk?",
+            "subtitle": "One-line value pitch."
+          }
+        },
+        {
+          "type": "cardGrid",
+          "props": {
+            "title": "Why work with us",
+            "description": "Three reasons to reach out.",
+            "items": [
+              { "title": "Benefit one", "description": "Why it matters." },
+              { "title": "Benefit two", "description": "Why it matters." },
+              { "title": "Benefit three", "description": "Why it matters." }
+            ]
+          }
+        },
+        {
+          "type": "richText",
+          "props": {
+            "title": "What to expect",
+            "description": "",
+            "bodyHtml": "<p>Describe the process, response time, and next steps.</p>"
+          }
+        },
+        {
+          "type": "contactForm",
+          "props": {
+            "title": "Send a message",
+            "description": ""
+          }
+        }
+      ]
+    },
+    {
+      "id": "businessCardDefault",
+      "label": "Business card",
+      "description": "Single-page profile layout: identity hero cover, primary actions, social icons, contact card, and a link list. Header and footer are shared site-wide.",
+      "sections": [
+        {
+          "type": "profileIdentity",
+          "variant": "heroCover",
+          "props": {
+            "title": "Your name",
+            "tagline": "A short tagline about what you do."
+          },
+          "bindings": { "sourceMode": "shared" }
+        },
+        {
+          "type": "actions",
+          "variant": "primaryGrid",
+          "props": {
+            "title": "",
+            "items": [
+              { "label": "Book a call", "href": "", "variant": "primary" },
+              { "label": "Send message", "href": "", "variant": "secondary" }
+            ]
+          }
+        },
+        {
+          "type": "socialLinks",
+          "variant": "iconsOnly",
+          "props": {
+            "title": "Follow"
+          },
+          "bindings": { "sourceMode": "shared" }
+        },
+        {
+          "type": "contact",
+          "variant": "glassV2",
+          "props": {
+            "title": "Get in touch",
+            "description": "Email, phone, and location."
+          },
+          "bindings": { "sourceMode": "shared" }
+        },
+        {
+          "type": "links",
+          "variant": "stackedCards",
+          "props": {
+            "title": "My links"
+          },
+          "bindings": { "sourceMode": "shared" }
+        }
+      ]
+    },
+    {
+      "id": "singlePageDefault",
+      "label": "Single page site",
+      "description": "Anchor-style single page: hero, about, gallery, FAQ, and contact. Header and footer are shared site-wide.",
+      "sections": [
+        {
+          "type": "hero",
+          "variant": "default",
+          "props": {
+            "eyebrow": "Welcome",
+            "title": "Your site title",
+            "subtitle": "A clear one-line description of what you offer."
+          }
+        },
+        {
+          "type": "richText",
+          "variant": "default",
+          "props": {
+            "title": "About",
+            "description": "A short intro to you or your work.",
+            "bodyHtml": "<p>Share a paragraph or two about who you are and what you do.</p>"
+          }
+        },
+        {
+          "type": "gallery",
+          "variant": "default",
+          "props": {
+            "title": "Gallery",
+            "description": "Selected images."
+          },
+          "bindings": { "sourceMode": "collection" }
+        },
+        {
+          "type": "faq",
+          "variant": "default",
+          "props": {
+            "title": "Frequently asked questions",
+            "description": ""
+          },
+          "bindings": { "sourceMode": "collection" }
+        },
+        {
+          "type": "contact",
+          "variant": "glassV2",
+          "props": {
+            "title": "Get in touch",
+            "description": "Reach out with questions or to start a project."
+          },
+          "bindings": { "sourceMode": "shared" }
+        }
+      ]
+    },
+    {
+      "id": "multiPageDefault",
+      "label": "Multi page site",
+      "description": "Home page for a multi-page site: hero, short intro, a blog feed, and a contact card. Header and footer are shared site-wide.",
+      "sections": [
+        {
+          "type": "hero",
+          "variant": "default",
+          "props": {
+            "eyebrow": "Welcome",
+            "title": "Your site title",
+            "subtitle": "A clear one-line description of what you offer."
+          }
+        },
+        {
+          "type": "richText",
+          "variant": "default",
+          "props": {
+            "title": "About",
+            "description": "",
+            "bodyHtml": "<p>A short intro to your work, mission, or story.</p>"
+          }
+        },
+        {
+          "type": "blogFeed",
+          "variant": "default",
+          "props": {
+            "title": "Latest posts",
+            "description": ""
+          },
+          "bindings": { "sourceMode": "query" }
+        },
+        {
+          "type": "contact",
+          "variant": "glassV2",
+          "props": {
+            "title": "Get in touch",
+            "description": "Reach out with questions."
+          },
+          "bindings": { "sourceMode": "shared" }
+        }
+      ]
+    }
+  ]
+}

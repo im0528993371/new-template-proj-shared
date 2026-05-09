@@ -1,0 +1,229 @@
+{
+  "sections": [
+    { "type": "header", "label": "Header" },
+    { "type": "hero", "label": "Hero" },
+    { "type": "profileIdentity", "label": "Profile identity" },
+    { "type": "actions", "label": "Actions" },
+    { "type": "richText", "label": "Rich Text" },
+    { "type": "links", "label": "Links" },
+    { "type": "socialLinks", "label": "Social links" },
+    { "type": "cardGrid", "label": "Card Grid" },
+    { "type": "gallery", "label": "Gallery" },
+    { "type": "faq", "label": "FAQ" },
+    { "type": "contact", "label": "Contact" },
+    { "type": "contactForm", "label": "Contact form" },
+    { "type": "blogFeed", "label": "Blog Feed" },
+    { "type": "storeFeed", "label": "Store feed" },
+    { "type": "digitalProductFeed", "label": "Digital product feed" },
+    { "type": "bookingsFeed", "label": "Bookings feed" },
+    { "type": "footer", "label": "Footer" }
+  ],
+  "sectionVariants": {
+    "header": [
+      { "key": "navPill", "label": "Nav pill" },
+      { "key": "splitNav", "label": "Split nav" },
+      { "key": "splitNavPill", "label": "Split nav pill" }
+    ],
+    "hero": [
+      { "key": "default", "label": "Default" },
+      { "key": "compact", "label": "Compact" },
+      { "key": "centered", "label": "Centered" },
+      { "key": "spotlight", "label": "Spotlight" },
+      { "key": "heroWithNav", "label": "Hero with nav" },
+      { "key": "imgWithTxt", "label": "Image with txt" }
+    ],
+    "profileIdentity": [
+      { "key": "default", "label": "Default" },
+      { "key": "heroCover", "label": "Hero cover" },
+      { "key": "centered", "label": "Centered" },
+      { "key": "chip", "label": "Chip" }
+    ],
+    "actions": [
+      { "key": "primaryGrid", "label": "Primary grid" }
+    ],
+    "richText": [
+      { "key": "default", "label": "Default" }
+    ],
+    "links": [
+      { "key": "default", "label": "Grid" },
+      { "key": "stacked", "label": "Stacked" },
+      { "key": "list", "label": "List" },
+      { "key": "stackedCards", "label": "Stacked cards" },
+      { "key": "stackedCardsV2", "label": "Stacked cards v2" }
+    ],
+    "socialLinks": [
+      { "key": "default", "label": "Chips" },
+      { "key": "iconsOnly", "label": "Icons only" },
+      { "key": "iconsOnlyV2", "label": "Icons only v2" }
+    ],
+    "cardGrid": [
+      { "key": "default", "label": "Grid" },
+      { "key": "list", "label": "List" }
+    ],
+    "gallery": [
+      { "key": "default", "label": "Grid" },
+      { "key": "lightbox", "label": "Lightbox" }
+    ],
+    "faq": [
+      { "key": "default", "label": "Default" }
+    ],
+    "contact": [
+      { "key": "default", "label": "Methods" },
+      { "key": "glass", "label": "Glass" },
+      { "key": "glassV2", "label": "Glass v2" }
+    ],
+    "contactForm": [
+      { "key": "default", "label": "Card" }
+    ],
+    "blogFeed": [
+      { "key": "default", "label": "Grid" },
+      { "key": "list", "label": "List" }
+    ],
+    "storeFeed": [
+      { "key": "default", "label": "Grid" }
+    ],
+    "digitalProductFeed": [
+      { "key": "default", "label": "Grid" }
+    ],
+    "bookingsFeed": [
+      { "key": "default", "label": "Grid" }
+    ],
+    "footer": [
+      { "key": "poweredBy", "label": "Powered by" },
+      { "key": "cta", "label": "Call to action" }
+    ]
+  },
+  "definitions": [
+    {
+      "key": "multi-page-site",
+      "websiteTypes": ["multi_page_site"],
+      "navigationModes": ["page_order", "manual"],
+      "allowedSectionTypes": ["header", "hero", "profileIdentity", "actions", "richText", "links", "socialLinks", "cardGrid", "gallery", "faq", "contact", "contactForm", "blogFeed", "storeFeed", "digitalProductFeed", "bookingsFeed", "footer"],
+      "supportsNavigation": true,
+      "pageMode": "multi"
+    },
+    {
+      "key": "single-page-site",
+      "websiteTypes": ["single_page_site"],
+      "navigationModes": ["anchors"],
+      "allowedSectionTypes": ["header", "hero", "profileIdentity", "actions", "richText", "links", "socialLinks", "cardGrid", "gallery", "faq", "contact", "contactForm", "blogFeed", "storeFeed", "digitalProductFeed", "bookingsFeed", "footer"],
+      "supportsNavigation": true,
+      "pageMode": "single"
+    },
+    {
+      "key": "business-card-site",
+      "websiteTypes": ["business_card"],
+      "navigationModes": ["none"],
+      "allowedSectionTypes": ["header", "profileIdentity", "actions", "socialLinks", "links", "contact", "footer"],
+      "supportsNavigation": false,
+      "pageMode": "single"
+    }
+  ],
+  "defaultDefinition": {
+    "key": "section-site",
+    "websiteTypes": [],
+    "navigationModes": [],
+    "allowedSectionTypes": ["header", "hero", "profileIdentity", "actions", "richText", "links", "socialLinks", "cardGrid", "gallery", "faq", "contact", "contactForm", "blogFeed", "storeFeed", "digitalProductFeed", "bookingsFeed", "footer"],
+    "supportsNavigation": true,
+    "pageMode": "multi"
+  },
+  "bindings": {
+    "sourceModes": ["manual", "shared", "collection", "query", "pick"],
+    "defaultSourceMode": "manual",
+    "description": "Section renderers read section.props; a backend resolver fills those props from content sources when sourceMode is shared/collection/query/pick."
+  },
+  "contentSources": {
+    "profile": {
+      "supports": ["shared"],
+      "sharedKeys": [
+        "site.identity",
+        "site.contact",
+        "site.location",
+        "site.socialLinks",
+        "site.links",
+        "site.defaultContactForm"
+      ]
+    },
+    "blog": {
+      "model": "Post",
+      "groupField": "category",
+      "supports": ["manual", "query", "pick"],
+      "queryKeys": ["category", "tag", "latest", "featured"]
+    },
+    "gallery": {
+      "model": "GalleryItem",
+      "groupField": "collectionId",
+      "supports": ["manual", "collection", "pick"],
+      "directory": "galleryCollection"
+    },
+    "faq": {
+      "model": "QAItem",
+      "groupField": "groupKey",
+      "supports": ["manual", "collection", "pick"],
+      "directory": "faqCollection"
+    },
+    "store": {
+      "model": "Product",
+      "groupField": "category",
+      "supports": ["manual", "query", "pick"],
+      "queryKeys": ["category", "latest", "featured"]
+    },
+    "digitalProducts": {
+      "model": "DigitalProduct",
+      "groupField": "category",
+      "supports": ["manual", "query", "pick"],
+      "queryKeys": ["category", "latest", "featured"]
+    },
+    "bookings": {
+      "model": "BookingService",
+      "groupField": "groupKey",
+      "supports": ["manual", "collection", "pick"]
+    },
+    "links": {
+      "model": "Link",
+      "groupField": "collectionId",
+      "supports": ["shared", "collection", "pick"],
+      "directory": "linkCollection",
+      "description": "First-class Link records. 'shared' returns all active links (falls back to legacy Profile.links[] during transition); 'collection' filters by LinkCollection slug; 'pick' selects specific Link._id values."
+    },
+    "formDefinition": {
+      "model": "FormDefinition",
+      "groupField": "name",
+      "supports": ["shared", "collection"],
+      "description": "Reusable contact/lead forms. 'shared' uses the profile default form; 'collection' picks a specific FormDefinition by id."
+    },
+    "galleryCollection": {
+      "model": "GalleryCollection",
+      "groupField": "slug",
+      "supports": ["directory"],
+      "description": "Managed catalog of named gallery collections. Its slugs populate GalleryItem.collectionId; the gallery feed's collection mode picks from this directory."
+    },
+    "faqCollection": {
+      "model": "FAQCollection",
+      "groupField": "slug",
+      "supports": ["directory"],
+      "description": "Managed catalog of named FAQ collections. Its slugs populate QAItem.groupKey; the faq section's collection mode picks from this directory."
+    },
+    "linkCollection": {
+      "model": "LinkCollection",
+      "groupField": "slug",
+      "supports": ["directory"],
+      "description": "Managed catalog of named link collections. Its slugs populate Profile.links[].collectionId; the links section's collection mode picks from this directory."
+    }
+  },
+  "sectionSources": {
+    "header": "profile",
+    "blogFeed": "blog",
+    "gallery": "gallery",
+    "faq": "faq",
+    "contact": "profile",
+    "links": "links",
+    "socialLinks": "profile",
+    "profileIdentity": "profile",
+    "contactForm": "formDefinition",
+    "storeFeed": "store",
+    "digitalProductFeed": "digitalProducts",
+    "bookingsFeed": "bookings",
+    "footer": "profile"
+  }
+}
